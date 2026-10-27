@@ -1,0 +1,59 @@
+/* Mobile-first styles: phones first */
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f3ed; color: #242424; font-family: Arial, sans-serif; line-height: 1.6; }
+header { background: white; text-align: center; padding: 18px 12px 0; border-bottom: 4px solid #922a22; }
+.top-line { font-size: 11px; font-weight: bold; letter-spacing: 2px; }
+h1 { font-family: Georgia, serif; color: #922a22; font-size: 42px; margin: 5px 0; }
+.tagline { font-style: italic; margin: 5px 0 15px; }
+nav { border-top: 1px solid #ccc; padding: 10px; }
+nav a { display: block; padding: 7px; color: #242424; font-weight: bold; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { padding: 14px; }
+.breaking { background: #eadfd5; padding: 12px; border-left: 5px solid #922a22; font-weight: bold; }
+.story { padding: 15px 0; border-bottom: 2px solid #ccc; }
+.category { color: #922a22; font-weight: bold; font-size: 12px; letter-spacing: 1px; }
+h2 { font-family: Georgia, serif; line-height: 1.2; font-size: 26px; }
+.story img { width: 100%; height: auto; display: block; border: 1px solid #bbb; background: #e9e2d8; }
+aside { background: #e9e2d8; padding: 15px; margin: 20px 0; }
+footer { text-align: center; background: #242424; color: white; padding: 15px; font-size: 12px; }
+/* First breakpoint: navigation becomes horizontal, images become narrower */
+@media (min-width: 500px) {
+  nav a { display: inline-block; margin: 0 12px; }
+  .story img { width: 85%; margin: 0 auto; }
+  h1 { font-size: 54px; }
+}
+/* Required assignment breakpoint: wider page and image float */
+@media (min-width: 576px) {
+  main { max-width: 900px; margin: 0 auto; padding: 24px; }
+  .story img { width: 46%; float: right; margin: 5px 0 12px 20px; }
+  .story { overflow: auto; }
+}
+/* Required assignment breakpoint: left aligned header and bigger stories */
+@media (min-width: 720px) {
+  header { text-align: left; padding: 22px 6% 0; }
+  nav { text-align: right; }
+  h2 { font-size: 32px; }
+  .story img { width: 40%; }
+}
+/* Rubric breakpoint: sidebar and article layout adjust */
+@media (min-width: 768px) {
+  .story { padding: 25px 0; }
+  aside { border-left: 6px solid #922a22; padding: 22px; }
+  .breaking { font-size: 18px; }
+}
+/* Required assignment breakpoint: desktop columns and larger images */
+@media (min-width: 992px) {
+  main { max-width: 1100px; }
+  .story { float: left; width: 68%; clear: left; padding-right: 24px; }
+  .story img { width: 55%; }
+  aside { float: right; width: 29%; margin-top: 25px; }
+  main::after { content: ""; display: block; clear: both; }
+}
+/* Rubric breakpoint: wider desktop layout and larger headlines */
+@media (min-width: 1024px) {
+  main { max-width: 1200px; padding: 35px 40px; }
+  h1 { font-size: 68px; }
+  .story h2 { font-size: 36px; }
+  .story img { width: 48%; }
+  aside { width: 27%; }
+}
